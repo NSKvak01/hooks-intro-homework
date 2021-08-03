@@ -1,11 +1,11 @@
 import React from "react"
 import './App.css';
-import HooksObject from "./hooks/Object"
+import HooksArray from "./hooks/Array"
 
 function App() {
-  const {value:username, onChange:usernameOnChange, clearInput:clearUsernameInput} = HooksObject("")
-  const {value:password, onChange:passwordOnChange, clearInput:clearPasswordInput} = HooksObject("")
-  const {value:email, onChange:emailOnChange, clearInput:clearEmailInput} = HooksObject("")
+  const [username, usernameOnChange, clearUsernameInput] = HooksArray("")
+  const [password, passwordOnChange, clearPasswordInput] = HooksArray("")
+  const [email, emailOnChange, clearEmailInput] = HooksArray("")
 
   function handleOnSubmit(e){
     e.preventDefault()
